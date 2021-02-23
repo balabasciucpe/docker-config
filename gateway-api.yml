@@ -1,0 +1,6 @@
+spring.cloud.loadbalancer.ribbon.enabled = false
+server.port= 4444
+eureka.instance.preferIpAddress = true
+eureka.client.registerWithEureka = true
+eureka.client.fetchRegistry = true
+eureka.client.serviceUrl.defaultZone = http://registration:8761/eureka/
