@@ -7,8 +7,9 @@ spring:
   cloud:
     gateway:
       routes:
-      - id: fotbalist-service
+      - id: fotbalist
         uri:
+          http://192.168.99.100:2222/
           lb://fotbalist
           http://fotbalist/
           http://fotbalist:2222/
