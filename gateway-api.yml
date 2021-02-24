@@ -4,12 +4,12 @@ server:
 spring:
   cloud:
     gateway:
-      routes:
+      routes[0]:
       - id: fotbalist
       - uri:
-          lb://fotbalist
+          lb://fotbalist-service
         predicates:
-        - Path=/fotbalist/**  
+        - Path=/api/fotbalist/**  
         filters:
         - name: CircuitBreaker
           args:
