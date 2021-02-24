@@ -7,7 +7,7 @@ spring:
       routes:
       - id: fotbalist-service
       - uri:
-          lb://fotbalist-service
+          http://192.168.99.100:2222
         predicates:
         - Path=/fotbalist/**  
         filters:
@@ -16,16 +16,16 @@ spring:
             name: fotbalist-service
             fallbackuri: forward:/fotbalistServiceFallBack
              #trebe sa fie invers, caci daca pica stucent service to asta ne apare ca picat
-      - id: echipa-service
-        uri:
-          lb://echipa-service  #e optional cred, e de la ribbon
-        predicates:
-        - Path=/echipa/** 
-        filters:
-        - name: CircuitBreaker
-          args:
-            name: echipa-service
-            fallbackuri: forward:/echipaServiceFallBack
+ #     - id: echipa-service
+  #      uri:
+   #       lb://echipa-service  #e optional cred, e de la ribbon
+    #    predicates:
+     #   - Path=/echipa/** 
+      #  filters:
+      #  - name: CircuitBreaker
+       #   args:
+        #    name: echipa-service
+         #   fallbackuri: forward:/echipaServiceFallBack
             
             
 eureka:
