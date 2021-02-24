@@ -9,22 +9,23 @@ spring:
       - uri:
           lb://fotbalist
         predicates:
-        - Path=/fotbalist/**
+        - Path= /fotbalist/**  
         filters:
         - name: CircuitBreaker
           args:
             name: fotbalist
-            fallbackuri: forward:/fotbalistServiceFallBack #trebe sa fie invers, caci daca pica stucent service to asta ne apare ca picat
-      - id: echipa-service
-        uri:
-          lb://echipa-service  #e optional cred, e de la ribbon
-        predicates:
-        - Path=/echipa/** 
-        filters:
-        - name: CircuitBreaker
-          args:
-            name: echipa-service
-            fallbackuri: forward:/echipaServiceFallBack
+            fallbackuri: forward:/fotbalistServiceFallBack
+             #trebe sa fie invers, caci daca pica stucent service to asta ne apare ca picat
+     # - id: echipa-service
+      #  uri:
+       #   lb://echipa-service  #e optional cred, e de la ribbon
+        #predicates:
+       # - Path=/echipa/** 
+       # filters:
+       # - name: CircuitBreaker
+        #  args:
+         #   name: echipa-service
+          #  fallbackuri: forward:/echipaServiceFallBack
             
             
 eureka:
