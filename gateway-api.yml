@@ -13,7 +13,7 @@ spring:
         filters:
         - name: CircuitBreaker
           args:
-            name: fotbalist
+            name: fotbalist-service
             fallbackuri: forward:/fotbalistServiceFallBack
              #trebe sa fie invers, caci daca pica stucent service to asta ne apare ca picat
      # - id: echipa-service
