@@ -9,7 +9,7 @@ spring:
       - uri:
           lb://fotbalist
         predicates:
-        - Path:/fotbalist/**
+        - Path=/fotbalist/**
         filters:
         - name: CircuitBreaker
           args:
