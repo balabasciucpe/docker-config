@@ -10,6 +10,7 @@ spring:
       - id: fotbalist
         uri:
           http://192.168.99.100:2222/
+          http://localhost:2222/
           lb://fotbalist
           http://fotbalist/
           http://fotbalist:2222/
@@ -18,7 +19,7 @@ spring:
         filters:
         - name: CircuitBreaker
           args:
-            name: fotbalist-service
+            name: fotbalist
             fallbackuri: forward:/fotbalistServiceFallBack #trebe sa fie invers, caci daca pica stucent service to asta ne apare ca picat
       - id: echipa-service
         uri:
