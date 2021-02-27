@@ -1,5 +1,4 @@
-#server:
-#  port: 4444
+server.port= 4444
   
 #spring:
 #  cloud:
@@ -28,12 +27,22 @@
          #   fallbackuri: forward:/echipaServiceFallBack
             
             
-eureka:
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    service-url:
+#eureka:
+#  client:
+ #   fetch-registry: true
+ #   register-with-eureka: true
+ #   service-url:
   #    defaultZone: http://192.168.99.100:8761/eureka/
-      defaultZone: http://registration/eureka/
-  instance:
-    prefer-ip-address: true
+ #     defaultZone: http://registration/eureka/
+#  instance:
+#    prefer-ip-address: true
+    
+    
+    
+    
+eureka.instance.preferIpAddress = true
+eureka.client.registerWithEureka = true
+eureka.client.fetchRegistry = true
+#eureka.client.serviceUrl.defaultZone = http://192.168.99.100:8761/eureka/  
+eureka.client.serviceUrl.defaultZone = http://registration:8761/eureka/
+#eureka.client.serviceUrl.defaultZone = http://localhost:8761/eureka/    
