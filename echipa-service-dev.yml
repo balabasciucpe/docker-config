@@ -9,17 +9,26 @@ eureka:
       defaultZone: http://registration:8761/eureka/
   instance:
     preferIpAddress: true
+#spring:
+ # datasource:
+  #  driver-class-name: com.mysql.cj.jdbc.Driver
+   # password: ''
+   # url: jdbc:mysql://localhost:3306/petrea
+   # username: root
+ # jpa:
+ #   database-platform: org.hibernate.dialect.MySQL55Dialect
+ #   generate-ddl: true
+ #   show-sql: true
 spring:
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    initialization-mode: always
     password: ''
-    url: jdbc:mysql://localhost:3306/petrea
+    url: jdbc:mysql://database:3306/petrea
     username: root
   jpa:
-    database-platform: org.hibernate.dialect.MySQL55Dialect
-    generate-ddl: true
-    show-sql: true
-
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      ddl-auto: update
 
 
 ############
