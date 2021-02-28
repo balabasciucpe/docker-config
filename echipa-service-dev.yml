@@ -23,7 +23,7 @@ spring:
   datasource:
     initialization-mode: always
     password: ''
-    url: jdbc:mysql://database:3306/petrea
+    url: jdbc:mysql://localhost:3306/petrea
     username: root
   jpa:
     database-platform: org.hibernate.dialect.MySQL5Dialect
