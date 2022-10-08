@@ -1,0 +1,31 @@
+server:
+  port: 1111
+
+eureka:
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    preferIpAddress: true
+#spring:
+ # datasource:
+  #  driver-class-name: com.mysql.cj.jdbc.Driver
+   # password: ''
+   # url: jdbc:mysql://localhost:3306/petrea
+   # username: root
+ # jpa:
+ #   database-platform: org.hibernate.dialect.MySQL55Dialect
+ #   generate-ddl: true
+ #   show-sql: true
+spring:
+  datasource:
+    initialization-mode: always
+    password: ''
+    url: jdbc:mysql://localhost:3306/petrea
+    username: root
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      ddl-auto: update
