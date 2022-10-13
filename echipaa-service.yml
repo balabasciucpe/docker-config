@@ -22,6 +22,7 @@ eureka:
 spring:
   datasource:
     initialization-mode: always
+    driver-class-name: com.mysql.cj.jdbc.Driver
   #  password: ''
     url: jdbc:mysql://localhost:3306/petrea
     username: root
